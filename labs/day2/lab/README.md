@@ -27,7 +27,7 @@ In this afternoon lab, you'll apply the concepts from Day 2 to build a comprehen
 ```bash
 # Terminal 1: Backend
 cd shopcursor-backend
-./mvnw spring-boot:run
+mvn spring-boot:run
 
 # Terminal 2: Frontend
 cd shopcursor-frontend

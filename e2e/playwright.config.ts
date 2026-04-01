@@ -20,7 +20,7 @@ export default defineConfig({
   ],
   webServer: [
     {
-      command: 'cd ../backend && ./mvnw spring-boot:run',
+      command: 'cd ../backend && mvn spring-boot:run',
       url: 'http://localhost:8080/api/products',
       reuseExistingServer: !process.env.CI,
       timeout: 120000,

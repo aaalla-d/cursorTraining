@@ -23,8 +23,8 @@ When asked to verify code changes:
 
 ### Backend (Java)
 ```bash
-cd backend && ./mvnw compile
-cd backend && ./mvnw test
+cd backend && mvn compile
+cd backend && mvn test
 ```
 
 ### Frontend (React)

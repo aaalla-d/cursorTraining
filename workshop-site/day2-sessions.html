@@ -328,7 +328,7 @@ Be specific. Cite line numbers. Suggest fixes.
 4. Create the service class with CRUD methods
 5. Create the REST controller with standard endpoints
 6. Create the unit test file
-7. Run <span class="string">`./mvnw compile`</span> to verify
+7. Run <span class="string">`mvn compile`</span> to verify
 8. Report what was created
 
 ## Templates
@@ -815,7 +815,7 @@ FILE=<span class="string">"$1"</span>
     ;;
   *.java)
     <span class="comment"># Use google-java-format or spotless</span>
-    ./mvnw spotless:apply -q
+    mvn spotless:apply -q
     <span class="keyword">echo</span> <span class="string">'{"action": "allow", "message": "Formatted Java code"}'</span>
     ;;
   *)

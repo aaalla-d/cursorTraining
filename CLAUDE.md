@@ -10,9 +10,9 @@ ShopCursor is a sample e-commerce app (developer merch store) used for a 2-day C
 
 ### Backend (Java Spring Boot)
 ```bash
-cd backend && ./mvnw spring-boot:run          # Start backend on :8080
-cd backend && ./mvnw test                      # Run all backend tests
-cd backend && ./mvnw test -Dtest=ClassName     # Run a single test class
+cd backend && mvn spring-boot:run              # Start backend on :8080
+cd backend && mvn test                         # Run all backend tests
+cd backend && mvn test -Dtest=ClassName        # Run a single test class
 ```
 
 ### Frontend (React/Vite)

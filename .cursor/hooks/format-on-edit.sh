@@ -15,8 +15,8 @@ fi
 case "$FILE_PATH" in
   *.java)
     # Format Java files with Maven's formatter if available
-    if [ -f "backend/mvnw" ]; then
-      cd backend && ./mvnw com.spotify.fmt:fmt-maven-plugin:format -q 2>/dev/null
+    if command -v mvn &>/dev/null; then
+      cd backend && mvn com.spotify.fmt:fmt-maven-plugin:format -q 2>/dev/null
     fi
     ;;
   *.ts|*.tsx|*.js|*.jsx|*.css)

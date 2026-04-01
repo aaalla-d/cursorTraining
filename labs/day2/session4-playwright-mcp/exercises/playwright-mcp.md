@@ -92,7 +92,7 @@ Let's use Cursor to generate a complete test for the product search feature.
 ```bash
 # Terminal 1: Start backend
 cd shopcursor-backend
-./mvnw spring-boot:run
+mvn spring-boot:run
 
 # Terminal 2: Start frontend
 cd shopcursor-frontend

@@ -30,7 +30,7 @@ Products include fun developer items: "Git Commit Hoodie", "404 Not Found Mug", 
 **Terminal 1 - Backend:**
 ```bash
 cd backend
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
 
 **Terminal 2 - Frontend:**

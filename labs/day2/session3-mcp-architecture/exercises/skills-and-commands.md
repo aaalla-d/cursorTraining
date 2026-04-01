@@ -176,7 +176,7 @@ When a bug is reported and you need to systematically investigate and fix it.
 - Fix the root cause, not the symptom
 - Keep fixes minimal — don't refactor unrelated code
 - Always add a regression test
-- For backend: run `cd backend && ./mvnw test`
+- For backend: run `cd backend && mvn test`
 - For frontend: run `cd frontend && npm run build`
 - For E2E: run `cd e2e && npx playwright test`
 ```

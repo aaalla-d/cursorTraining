@@ -40,7 +40,7 @@ java -version
 
 ```bash
 cd backend
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
 
 Open http://localhost:8080/api/products in your browser. You should see JSON with 8 products.
@@ -91,9 +91,10 @@ All checks should pass with green checkmarks.
 - Backend (8080): `lsof -i :8080` to find the process, then `kill <PID>`
 - Frontend (5173): `lsof -i :5173` to find the process, then `kill <PID>`
 
-### Maven wrapper not executable
+### Maven not found
+Make sure Maven is installed and available on your PATH:
 ```bash
-chmod +x backend/mvnw
+mvn --version
 ```
 
 ### Node modules issues
@@ -106,7 +107,7 @@ npm install
 
 Terminal 1:
 ```bash
-cd backend && ./mvnw spring-boot:run
+cd backend && mvn spring-boot:run
 ```
 
 Terminal 2:

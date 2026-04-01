@@ -21,9 +21,10 @@ export JAVA_HOME=/usr/lib/jvm/java-17
 # Add to ~/.zshrc or ~/.bashrc for persistence
 ```
 
-### "mvnw: Permission denied"
+### "mvn: command not found"
+Make sure Maven is installed and available on your PATH:
 ```bash
-chmod +x backend/mvnw
+mvn --version
 ```
 
 ### "H2 Console not working"

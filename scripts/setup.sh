@@ -22,13 +22,12 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 echo "Project directory: $PROJECT_DIR"
 echo ""
 
-# Backend - make mvnw executable
+# Backend - check Maven is available
 echo -e "${YELLOW}[1/4] Setting up backend...${NC}"
-if [ -f "$PROJECT_DIR/backend/mvnw" ]; then
-    chmod +x "$PROJECT_DIR/backend/mvnw"
-    echo -e "${GREEN}  ✓ Maven wrapper is executable${NC}"
+if command -v mvn &>/dev/null; then
+    echo -e "${GREEN}  ✓ Maven is available ($(mvn --version | head -1))${NC}"
 else
-    echo -e "${RED}  ✗ Maven wrapper not found${NC}"
+    echo -e "${RED}  ✗ Maven not found — install Maven and ensure it's on your PATH${NC}"
 fi
 
 # Frontend - install dependencies
@@ -60,6 +59,6 @@ echo "  Setup complete!"
 echo "========================================${NC}"
 echo ""
 echo "Next steps:"
-echo "  1. Start backend:  cd backend && ./mvnw spring-boot:run"
+echo "  1. Start backend:  cd backend && mvn spring-boot:run"
 echo "  2. Start frontend: cd frontend && npm run dev"
 echo "  3. Open browser:   http://localhost:5173"

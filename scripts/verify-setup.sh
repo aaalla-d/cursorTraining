@@ -76,12 +76,12 @@ else
     ((FAIL++))
 fi
 
-# Check Maven wrapper
-if [ -x "$PROJECT_DIR/backend/mvnw" ]; then
-    echo -e "  ${GREEN}✓${NC} Maven wrapper is executable"
+# Check Maven is available
+if command -v mvn &>/dev/null; then
+    echo -e "  ${GREEN}✓${NC} Maven is available"
     ((PASS++))
 else
-    echo -e "  ${YELLOW}!${NC} Maven wrapper not executable (run: chmod +x backend/mvnw)"
+    echo -e "  ${YELLOW}!${NC} Maven not found (install Maven and add to PATH)"
     ((FAIL++))
 fi
 
