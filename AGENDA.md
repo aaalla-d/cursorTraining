@@ -18,8 +18,9 @@
 |------|---------|-------------|
 | 1:15 - 3:15 | **Day 1 Lab: Refactor & Enhance** | Refactor CartService.java & ProductList.tsx, add Wishlist feature |
 | 3:15 - 3:30 | *Break* | |
-| 3:30 - 4:15 | **Lab Review & Discussion** | Share approaches, compare solutions |
-| 4:15 - 4:30 | **Day 1 Wrap-up** | Key takeaways, preview Day 2 |
+| 3:30 - 4:00 | **Lab Review & Discussion** | Share approaches, compare solutions |
+| 4:00 - 4:45 | **Cursor Tips & Tricks** | Rapid-fire power-user tips: multi-cursor + AI, Notepads, commit gen, token budgets, combining primitives |
+| 4:45 - 5:00 | **Day 1 Wrap-up** | Key takeaways, preview Day 2 |
 
 ---
 

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursor Tips &amp; Tricks &mdash; ShopCursor Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" id="nav">
+  <div class="container">
+    <div class="nav-brand">Deloitte<span>.</span> Digital</div>
+    <a href="index.html" class="nav-back">&larr; Back to Workshop Home</a>
+    <div style="display:flex;gap:8px;align-items:center;">
+      <button class="btn btn-outline btn-sm" onclick="togglePresentation()">Present</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero" id="hero">
+  <div class="container">
+    <span class="section-label">Day 1 &mdash; 4:00 - 4:45</span>
+    <h1>Cursor Tips &amp; Tricks</h1>
+    <p>
+      A rapid-fire showcase of power-user features and hidden gems in Cursor.
+      Each tip is 2&ndash;3 minutes &mdash; quick demo, key takeaway, move on.
+      These are the shortcuts and workflows that separate beginners from power users.
+    </p>
+  </div>
+</section>
+
+<!-- ===== 1. MULTI-CURSOR + AI ===== -->
+<div class="section" id="multi-cursor-ai">
+  <div class="container">
+    <div class="talk-track">
+      <h2>1. Multi-Cursor + AI</h2>
+
+      <div class="narration">
+        "Most of you know multi-cursor editing &mdash; hold Alt and click to place
+        multiple cursors. But did you know you can select multiple similar code blocks
+        and then hit Cmd+K to apply an AI transformation to all of them at once?
+        This is incredibly powerful for batch refactoring."
+      </div>
+
+      <div class="talk-point">
+        <h3>The Workflow</h3>
+        <ol>
+          <li><strong>Cmd+D</strong> &mdash; Select the next occurrence of the current word. Repeat to select more.</li>
+          <li><strong>Cmd+Shift+L</strong> &mdash; Select <em>all</em> occurrences at once.</li>
+          <li><strong>Cmd+K</strong> with multiple selections &mdash; AI applies the same transformation to each selection independently.</li>
+        </ol>
+      </div>
+
+      <div class="talk-point">
+        <h3>When to Use It</h3>
+        <ul>
+          <li>Converting multiple <code>var</code> declarations to <code>const</code>/<code>let</code> with AI-chosen types</li>
+          <li>Adding JSDoc comments to several function signatures at once</li>
+          <li>Renaming patterns across a file where find-and-replace isn't smart enough</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-insight">
+        <h4>Key Takeaway</h4>
+        <p>Multi-cursor + Cmd+K = batch AI edits. Faster than editing one by one, smarter than regex find-and-replace.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 2. COMMIT MESSAGE GENERATION ===== -->
+<div class="section white-bg" id="commit-gen">
+  <div class="container">
+    <div class="talk-track">
+      <h2>2. AI Commit Messages</h2>
+
+      <div class="narration">
+        "Stop spending time writing commit messages. Cursor can read your staged diff
+        and generate a meaningful, conventional commit message for you. It looks at the
+        actual changes &mdash; not just file names &mdash; so the messages are surprisingly good."
+      </div>
+
+      <div class="talk-point">
+        <h3>How It Works</h3>
+        <ol>
+          <li>Stage your changes with <code>git add</code>.</li>
+          <li>Open the <strong>Source Control</strong> panel (Ctrl+Shift+G).</li>
+          <li>Click the <strong>sparkle icon</strong> next to the commit message input.</li>
+          <li>Cursor reads the diff, generates a message, and pre-fills the input.</li>
+        </ol>
+      </div>
+
+      <div class="callout callout-insight">
+        <h4>Key Takeaway</h4>
+        <p>One click to generate a commit message from your diff. Edit if needed, then commit. Saves 30 seconds every time.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 3. NOTEPADS ===== -->
+<div class="section" id="notepads">
+  <div class="container">
+    <div class="talk-track">
+      <h2>3. Notepads</h2>
+
+      <div class="narration">
+        "Notepads are like persistent scratch pads that live across conversations.
+        Think of them as reusable context blocks. You can store architecture decisions,
+        API response examples, or complex requirements, and then reference them from
+        any Chat or Composer session with the @ symbol."
+      </div>
+
+      <div class="talk-point">
+        <h3>Creating &amp; Using Notepads</h3>
+        <ul>
+          <li>Open the <strong>Notepads</strong> panel in the sidebar (or Cmd+Shift+P &rarr; "Notepad").</li>
+          <li>Create a new notepad with a descriptive name (e.g., "API Contract", "Migration Notes").</li>
+          <li>Write or paste your content &mdash; free-form text, code snippets, whatever.</li>
+          <li>In Chat or Composer, type <code>@notepad-name</code> to inject that notepad's content as context.</li>
+        </ul>
+      </div>
+
+      <div class="talk-point">
+        <h3>Good Use Cases</h3>
+        <ul>
+          <li><strong>API response shapes</strong> &mdash; paste a sample JSON response so the AI always knows the structure.</li>
+          <li><strong>Architecture decisions</strong> &mdash; "We use constructor injection, not field injection."</li>
+          <li><strong>Complex prompts</strong> &mdash; store a well-tuned prompt you reuse across sessions.</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-insight">
+        <h4>Key Takeaway</h4>
+        <p>Notepads = persistent context you can reference with @. No more re-explaining the same thing every conversation.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 4. CURSORIGNORE & CURSORINDEXINGIGNORE ===== -->
+<div class="section white-bg" id="cursorignore">
+  <div class="container">
+    <div class="talk-track">
+      <h2>4. .cursorignore &amp; .cursorindexingignore</h2>
+
+      <div class="narration">
+        "You control what the AI sees. These two files let you draw boundaries &mdash;
+        one prevents indexing, the other prevents all access. This matters for security,
+        performance, and keeping the AI focused on the right code."
+      </div>
+
+      <div class="talk-point">
+        <h3>The Two Files</h3>
+        <div class="two-col">
+          <div>
+            <h4><code>.cursorindexingignore</code></h4>
+            <ul>
+              <li>Files are <strong>not indexed</strong> (no embeddings, no semantic search).</li>
+              <li>AI can still see them if you explicitly open or @-reference them.</li>
+              <li>Good for: <code>node_modules/</code>, <code>dist/</code>, generated code, large data files.</li>
+            </ul>
+          </div>
+          <div>
+            <h4><code>.cursorignore</code></h4>
+            <ul>
+              <li>Files are <strong>completely invisible</strong> to the AI &mdash; never indexed, never readable.</li>
+              <li>Good for: <code>.env</code>, secrets, credentials, proprietary code you never want sent.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="talk-point">
+        <h3>Example</h3>
+        <div class="code-block">
+          <span class="comment"># .cursorignore</span><br>
+          .env<br>
+          .env.*<br>
+          secrets/<br>
+          credentials.json<br>
+          <br>
+          <span class="comment"># .cursorindexingignore</span><br>
+          node_modules/<br>
+          dist/<br>
+          build/<br>
+          *.min.js
+        </div>
+      </div>
+
+      <div class="callout callout-warning">
+        <h4>Security Note</h4>
+        <p>If your project has secrets or proprietary code, set up <code>.cursorignore</code> on day one. This is your first line of defense against accidental data leakage.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 5. REUSING PROMPTS AS COMMANDS ===== -->
+<div class="section" id="reuse-prompts">
+  <div class="container">
+    <div class="talk-track">
+      <h2>5. Saving Prompts as Commands</h2>
+
+      <div class="narration">
+        "If you find yourself typing the same prompt over and over &mdash; 'review this for
+        security issues', 'add error handling', 'write tests for this' &mdash; stop and turn it
+        into a slash command. It takes 30 seconds and saves you minutes every day."
+      </div>
+
+      <div class="talk-point">
+        <h3>Quick Recipe</h3>
+        <ol>
+          <li>Create <code>.cursor/commands/your-command.md</code></li>
+          <li>Write your prompt as markdown &mdash; the file name becomes the command name.</li>
+          <li>In Chat, type <code>/your-command</code> and it expands into the full prompt.</li>
+        </ol>
+      </div>
+
+      <div class="talk-point">
+        <h3>Example: A Quick Review Command</h3>
+        <div class="code-block">
+          <span class="comment"># .cursor/commands/security-review.md</span><br>
+          <br>
+          Review the selected code for security vulnerabilities:<br>
+          <br>
+          - SQL injection<br>
+          - XSS (cross-site scripting)<br>
+          - Authentication/authorization gaps<br>
+          - Secrets or credentials in code<br>
+          - Input validation issues<br>
+          <br>
+          Report findings as a numbered list with severity (HIGH/MEDIUM/LOW).
+        </div>
+      </div>
+
+      <div class="callout callout-insight">
+        <h4>Key Takeaway</h4>
+        <p>Good prompts are reusable. Turn them into commands and share them with your team via version control.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 6. LONG FILE NAVIGATION ===== -->
+<div class="section white-bg" id="file-navigation">
+  <div class="container">
+    <div class="talk-track">
+      <h2>6. Navigating Large Files</h2>
+
+      <div class="narration">
+        "Large files are where Cursor really shines over a plain text editor. Instead of
+        scrolling through 500 lines looking for a method, you can ask the AI or use the
+        built-in symbol navigation to jump right to it."
+      </div>
+
+      <div class="talk-point">
+        <h3>Navigation Shortcuts</h3>
+        <ul>
+          <li><strong>Cmd+Shift+O</strong> &mdash; Go to Symbol in the current file. Type a method name and jump straight to it.</li>
+          <li><strong>Cmd+T</strong> &mdash; Go to Symbol across the entire workspace. Find any class, function, or variable.</li>
+          <li><strong>Breadcrumbs</strong> (top of editor) &mdash; Click to navigate the file structure. Shows class &rarr; method hierarchy.</li>
+          <li><strong>Outline View</strong> (sidebar) &mdash; Tree view of all symbols in the file. Click to jump.</li>
+        </ul>
+      </div>
+
+      <div class="talk-point">
+        <h3>AI-Assisted Navigation</h3>
+        <ul>
+          <li>In Chat: <em>"Where is the checkout logic in this file?"</em> &mdash; AI tells you the exact line.</li>
+          <li><code>@file</code> + question &mdash; AI reads the entire file and answers about structure.</li>
+          <li><strong>Cmd+Click</strong> on any symbol &mdash; Go to Definition. Works across files and even into dependencies.</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-insight">
+        <h4>Key Takeaway</h4>
+        <p>Cmd+Shift+O for within-file, Cmd+T for workspace-wide. Combine with AI for "find the logic that does X."</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 7. SETTINGS SYNC ===== -->
+<div class="section" id="settings-sync">
+  <div class="container">
+    <div class="talk-track">
+      <h2>7. Settings Sync</h2>
+
+      <div class="narration">
+        "If you use Cursor on multiple machines &mdash; work laptop, personal machine,
+        maybe a VM &mdash; settings sync keeps everything consistent. Your keybindings,
+        extensions, themes, and Cursor-specific settings follow you everywhere."
+      </div>
+
+      <div class="talk-point">
+        <h3>What Syncs</h3>
+        <ul>
+          <li><strong>Settings</strong> &mdash; editor preferences, AI model selection, privacy settings.</li>
+          <li><strong>Keybindings</strong> &mdash; custom shortcuts.</li>
+          <li><strong>Extensions</strong> &mdash; installed extensions and their settings.</li>
+          <li><strong>Themes</strong> &mdash; color theme and icon theme.</li>
+        </ul>
+      </div>
+
+      <div class="talk-point">
+        <h3>What Doesn't Sync (by design)</h3>
+        <ul>
+          <li><strong>Project-level config</strong> &mdash; <code>.cursor/</code> folder, rules, commands, skills. These live in the repo and are shared via git.</li>
+          <li><strong>MCP server configs</strong> &mdash; These often contain machine-specific paths or tokens.</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-insight">
+        <h4>Key Takeaway</h4>
+        <p>Personal prefs sync via your account. Team conventions sync via the <code>.cursor/</code> folder in git. Both are important.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. TOKEN BUDGET TRICKS ===== -->
+<div class="section white-bg" id="token-budget">
+  <div class="container">
+    <div class="talk-track">
+      <h2>8. Token Budget Tricks</h2>
+
+      <div class="narration">
+        "Every AI request has a token limit. The more context you send, the less room
+        the model has to think and respond. Keeping your context lean isn't just about
+        cost &mdash; it actually produces better results. Here are the tricks."
+      </div>
+
+      <div class="talk-point">
+        <h3>Lean Context Strategies</h3>
+        <ul>
+          <li><strong>Be specific with @-references</strong> &mdash; Use <code>@file</code> for a single file, not <code>@codebase</code> when you know where the code is.</li>
+          <li><strong>Use <code>@symbol</code></strong> &mdash; Reference a specific function or class instead of the whole file.</li>
+          <li><strong>Trim conversation history</strong> &mdash; Start a new Chat session when switching topics. Long conversations accumulate stale context.</li>
+          <li><strong>Use <code>.cursorindexingignore</code></strong> &mdash; Keep noise out of <code>@codebase</code> results.</li>
+          <li><strong>Small, focused prompts</strong> &mdash; "Add null check to getProduct()" beats "make the product service more robust."</li>
+        </ul>
+      </div>
+
+      <div class="talk-point">
+        <h3>Signs Your Context Is Too Large</h3>
+        <ul>
+          <li>The AI "forgets" instructions you gave earlier in the conversation.</li>
+          <li>Responses become generic or miss specifics about your code.</li>
+          <li>You see truncation warnings or slower response times.</li>
+        </ul>
+      </div>
+
+      <div class="callout callout-insight">
+        <h4>Key Takeaway</h4>
+        <p>Less context = better results. Be surgical with @-references. Start fresh conversations often.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 9. QUICK FIXES FROM ERRORS ===== -->
+<div class="section" id="quick-fixes">
+  <div class="container">
+    <div class="talk-track">
+      <h2>9. Quick Fixes from Errors</h2>
+
+      <div class="narration">
+        "When you see a red squiggly in your code, don't just read the error &mdash;
+        click on it. Cursor adds AI-powered fix suggestions right alongside the
+        standard language server fixes. Often it can resolve the error in one click."
+      </div>
+
+      <div class="talk-point">
+        <h3>The Workflow</h3>
+        <ol>
+          <li>Hover over a red/yellow underline, or click the lightbulb icon.</li>
+          <li>Look for <strong>"Fix with AI"</strong> in the quick actions menu.</li>
+          <li>Cursor reads the error, the surrounding code, and proposes a fix inline.</li>
+          <li>Accept, modify, or reject the suggestion.</li>
+        </ol>
+      </div>
+
+      <div class="talk-point">
+        <h3>Works Great For</h3>
+        <ul>
+          <li>Missing imports &mdash; AI adds the right import statement.</li>
+          <li>Type mismatches &mdash; AI converts or casts to the correct type.</li>
+          <li>Missing method implementations &mdash; AI generates the method stub.</li>
+          <li>Syntax errors &mdash; AI corrects the syntax in context.</li>
+        </ul>
+      </div>
+
+      <div class="talk-point">
+        <h3>Pro Tip: Fix from Terminal</h3>
+        <p>
+          When a build or test fails in the terminal, click the error message.
+          Cursor can read the stack trace and offer to fix the source file directly.
+          Use <code>@terminal</code> in Chat to pass the terminal output as context.
+        </p>
+      </div>
+
+      <div class="callout callout-insight">
+        <h4>Key Takeaway</h4>
+        <p>Errors are fix opportunities. Click the lightbulb, let AI resolve it. Works from both the editor and the terminal.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 10. COMBINING PRIMITIVES ===== -->
+<div class="section white-bg" id="combining-primitives">
+  <div class="container">
+    <div class="talk-track">
+      <h2>10. Combining Primitives</h2>
+
+      <div class="narration">
+        "This is the meta-tip. Everything we have seen today &mdash; Rules, Commands, Skills,
+        Hooks, Subagents &mdash; these are individual primitives. The real power comes from
+        chaining them together into automated workflows. Let me show you what that looks like."
+      </div>
+
+      <div class="talk-point">
+        <h3>Example: The &ldquo;Add Feature&rdquo; Pipeline</h3>
+        <p>Imagine you want to add a new REST endpoint. Here is how the primitives chain together:</p>
+        <ol>
+          <li><strong>Skill</strong> (<code>/add-feature</code>) &mdash; Orchestrates the multi-step process: create model, repository, service, controller, tests.</li>
+          <li><strong>Rules</strong> (<code>.cursor/rules/</code>) &mdash; Automatically enforce coding standards as each file is generated (constructor injection, ResponseEntity returns, etc.).</li>
+          <li><strong>Hook</strong> (afterFileEdit) &mdash; Auto-formats every Java file immediately after the agent writes it.</li>
+          <li><strong>Subagent</strong> (verify-agent) &mdash; Runs in the background to compile and test after each step.</li>
+          <li><strong>Command</strong> (<code>/review</code>) &mdash; Final review pass on the generated code.</li>
+        </ol>
+      </div>
+
+      <div class="talk-point">
+        <h3>The Primitives Cheat Sheet</h3>
+        <div class="card-grid">
+          <div class="card">
+            <h4>Rules</h4>
+            <p>Always-on guardrails. The AI reads them automatically.</p>
+            <p><em>Prevention layer</em></p>
+          </div>
+          <div class="card">
+            <h4>Commands</h4>
+            <p>On-demand prompt shortcuts. You invoke them with <code>/name</code>.</p>
+            <p><em>Reuse layer</em></p>
+          </div>
+          <div class="card">
+            <h4>Skills</h4>
+            <p>Multi-step workflows with templates and supporting files.</p>
+            <p><em>Orchestration layer</em></p>
+          </div>
+          <div class="card">
+            <h4>Hooks</h4>
+            <p>Scripts that run before/after agent actions.</p>
+            <p><em>Enforcement layer</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-insight">
+        <h4>Key Takeaway</h4>
+        <p>Individual primitives are useful. Combined primitives are transformative. Think in pipelines, not individual tools.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="footer-logo">Deloitte<span>.</span> Digital</div>
+    <p style="margin-top: 8px;">
+      <a href="index.html">&larr; Back to Workshop Home</a>
+    </p>
+    <p style="margin-top: 12px;">ShopCursor Workshop &mdash; Cursor IDE for AI-Assisted Development</p>
+  </div>
+</footer>
+
+<!-- ===== PRESENTATION CONTROLS ===== -->
+<div class="pres-controls" id="presControls">
+  <button onclick="presNav(-1)" title="Previous section">&#x25B2;</button>
+  <button onclick="presNav(1)" title="Next section">&#x25BC;</button>
+  <button onclick="togglePresentation()" title="Exit presentation">&#x2715;</button>
+</div>
+
+<script>
+// ===== Presentation Mode =====
+let isPresentationMode = false;
+let currentSlide = 0;
+
+function getSlides() {
+  return document.querySelectorAll('.talk-track, .page-hero');
+}
+
+function togglePresentation() {
+  isPresentationMode = !isPresentationMode;
+  document.body.classList.toggle('presentation-mode', isPresentationMode);
+
+  if (isPresentationMode) {
+    currentSlide = 0;
+    scrollToSlide(0);
+    document.addEventListener('keydown', presKeyHandler);
+  } else {
+    document.removeEventListener('keydown', presKeyHandler);
+  }
+}
+
+function scrollToSlide(index) {
+  const slides = getSlides();
+  if (index >= 0 && index < slides.length) {
+    currentSlide = index;
+    slides[index].scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function presNav(direction) {
+  const slides = getSlides();
+  const next = currentSlide + direction;
+  if (next >= 0 && next < slides.length) {
+    scrollToSlide(next);
+  }
+}
+
+function presKeyHandler(e) {
+  if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+    e.preventDefault();
+    presNav(1);
+  } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+    e.preventDefault();
+    presNav(-1);
+  } else if (e.key === 'Escape') {
+    togglePresentation();
+  }
+}
+</script>
+
+</body>
+</html>
